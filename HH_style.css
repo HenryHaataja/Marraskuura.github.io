@@ -1,15 +1,7 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 * {
 	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
@@ -24,11 +16,7 @@ html {
 body {
 	vertical-align: middle;
 	top: 0;
-	bottom: o;
-}
-
-header {
-	float: left;
+	bottom: 0;
 }
 
 footer {
@@ -36,18 +24,6 @@ footer {
 	height: 15px;
 	width: 100%;
 }
-
-/*
-p::before {
-	content: "";
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background-size: contain;
-	float: left;
-	margin-right: 10px;
-}
-*/
 
 p.copyright {
 	position: absolute;
@@ -61,10 +37,11 @@ p.copyright {
 
 img {
 	float: right;
-	margin: auto;
 	height: 200px;
 	border: 1px solid LightBlue;
 	border-radius: 50%;
+	position: relative;
+	top: -5px;
 }
 
 icon {
@@ -151,47 +128,26 @@ li::marker {
 	border-radius: 25px;
 }
 
-.container {
-	display: -webkit-box;
-	display: -ms-flexbox;
+.flex-container {
 	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.flex-container {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+.centered-container {
+	display: table;
+	margin: 0 auto;
 }
 
 @media (max-width: 800px) {
 	.flex-header {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: reverse;
-		    -ms-flex-direction: column-reverse;
-		        flex-direction: column-reverse;
+		flex-direction: column-reverse;
 	}
 	.flex-container {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
+		flex-direction: column;
 	}
 	.tabContent {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
+		flex-direction: column;
 	}
 }
 
@@ -207,4 +163,3 @@ li::marker {
 	border-radius: 25px;
 	width: 800px;
 }
-
